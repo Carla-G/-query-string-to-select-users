@@ -17,7 +17,10 @@ const usersHandler = require("./usersHandler");
 
 app.get("/api/users", usersHandler.getUsers);
 app.get("/api/users/:id", usersHandler.getUsersById);
+
 app.post("/api/users", usersHandler.postUser);
+
+app.put("/api/users/:id", usersHandler.updateUser)
 
 app.listen(port, (err) => {
     if (err) {
